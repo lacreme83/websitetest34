@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saloon du far west</title>
+</head>
+<body>
+    <section><a href="https://page7.html/">aller sur la page Détails du Saloon du Far West</a>
+    </section>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+  
+    :root {
+      --primary-color: #d4af37;
+      --secondary-color: #8b4513;
+      --background-color: #1c1c1c;
+      --text-color: #f0e68c;
+      --matic-color: #8247e5;
+      --legendary-color: #ff8000;
+    }
+  
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      background-image: url('https://example.com/wild-west-texture.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+    }
+  
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px #000;
+    }
+  
+    .nft-details {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 30px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+  
+    .nft-image {
+      flex: 1;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+  
+    .nft-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 128, 0, 0.5);
+      transition: all 0.3s ease;
+      animation: slowRotate 60s linear infinite;
+      transform-style: preserve-3d;
+    }
+  
+    @keyframes slowRotate {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  
+    .nft-image::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      border: 2px solid var(--legendary-color);
+      border-radius: 10px;
+      z-index: 1;
+      opacity: 1;
+      animation: slowRotate 60s linear infinite;
+    }
+  
+    .nft-image::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 2;
+      animation: shine 5s infinite;
+    }
+  
+    @keyframes shine {
+      0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      }
+      80% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      }
+      100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+      }
+    }
+  
+    .nft-info {
+      flex: 1;
+      padding: 20px;
+    }
+  
+    .nft-info h2 {
+      color: var(--legendary-color);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    .nft-info p {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+  
+    .nft-info .price {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: var(--matic-color);
+    }
+  
+    .buy-button {
+      background-color: var(--primary-color);
+      color: var(--background-color);
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    .buy-button:hover {
+      background-color: #fff;
+      color: var(--primary-color);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    }
+  
+    .description {
+      margin-top: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .description h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+  
+    .features {
+      margin-top: 30px;
+    }
+  
+    .features h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+  
+    .features ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .features li {
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .features li::before {
+      content: "🌟";
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+  
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+  
+    .copyright {
+      font-size: 0.9em;
+    }
+  </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Saloon du Far West - NFT Légendaire</h1>
+      </div>
+    </header>
+  
+    <div class="container">
+      <div class="nft-details">
+        <div class="nft-image">
+          <img src="https://page-images.websim.ai/Saloon%20de%20Red%20Dead%20Redemption%202_1024x1024x34dSyOqImfGcBJpQlx2b9a118923b26.jpg" alt="Saloon de Red Dead Redemption 2" width="250" height="250">
+        </div>
+        <div class="nft-info">
+          <h2>Saloon du Far West</h2>
+          <p class="rarity">Rareté: <span style="color: var(--legendary-color);">Légendaire</span></p>
+          <p class="price">Prix: 1200 MATIC</p>
+          <p class="supply">Supply: 25</p>
+          <p class="minted">Mintés: 12</p>
+          <button class="buy-button">Acheter ce NFT</button>
+        </div>
+      </div>
+  
+      <div class="description">
+        <h3>Description</h3>
+        <p>Plongez au cœur de l'Ouest sauvage avec ce NFT légendaire représentant un authentique saloon de l'époque. Ce n'est pas qu'une simple image, c'est une porte d'entrée vers une expérience immersive unique dans l'univers de Red Dead Redemption 2. En tant que propriétaire de ce NFT, vous devenez le maître des lieux d'un des établissements les plus emblématiques et lucratifs de la frontière.</p>
+      </div>
+  
+      <div class="features">
+        <h3>Caractéristiques uniques</h3>
+        <ul>
+          <li>Propriété exclusive in-game : Devenez le propriétaire d'un véritable saloon dans le jeu RedM RP.</li>
+          <li>Revenus passifs : Générez des $COWBOY grâce aux activités de votre saloon (vente de boissons, jeux d'argent).</li>
+          <li>Hub social : Votre saloon devient un lieu de rencontre prisé pour les autres joueurs.</li>
+          <li>Personnalisation : Possibilité de décorer et d'améliorer votre saloon pour le rendre unique.</li>
+          <li>Événements spéciaux : Organisez des tournois de poker, des spectacles ou des concours de boisson pour attirer la foule.</li>
+          <li>Protection du shérif : Bénéficiez d'une protection accrue contre les attaques de hors-la-loi.</li>
+          <li>Accès VIP : Obtenez des avantages exclusifs lors des mises à jour et événements du jeu.</li>
+        </ul>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="container">
+        <p class="copyright">&copy; 2024-2025 RedM RP NFT. Tous droits réservés.</p>
+      </div>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+      // Fonction pour connecter le portefeuille
+      async function connectWallet() {
+        if (typeof window.ethereum !== 'undefined') {
+          try {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            console.log('Portefeuille connecté avec succès!');
+            document.querySelector('.buy-button').textContent = 'Acheter pour 1200 MATIC';
+          } catch (error) {
+            console.error('Erreur lors de la connexion du portefeuille:', error);
+          }
+        } else {
+          console.log('MetaMask n\'est pas installé!');
+          alert('Veuillez installer MetaMask pour acheter ce NFT.');
+        }
+      }
+  
+      // Fonction pour simuler l'achat du NFT
+      async function buyNFT() {
+        if (typeof window.ethereum !== 'undefined') {
+          try {
+            await connectWallet();
+            // Ici, vous intégreriez la logique réelle d'achat avec un contrat intelligent
+            console.log('Achat du NFT Saloon du Far West en cours...');
+            alert('Félicitations ! Vous avez acheté le NFT Saloon du Far West. (Simulation)');
+          } catch (error) {
+            console.error('Erreur lors de l\'achat du NFT:', error);
+          }
+        } else {
+          alert('Veuillez installer MetaMask pour acheter ce NFT.');
+        }
+      }
+  
+      // Écouteur d'événement pour le bouton d'achat
+      document.querySelector('.buy-button').addEventListener('click', buyNFT);
+    </script>
+  </body></html>
